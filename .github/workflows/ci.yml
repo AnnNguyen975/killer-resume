@@ -25,6 +25,7 @@ jobs:
 
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
-
-      - name: Run Playwright Tests
+      - name: Run build
+        run: pnpm run --filter front-end build
+      - name: Run Unit Tests
         run: pnpm run --filter front-end test:unit
